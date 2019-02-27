@@ -8,39 +8,43 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="app">
-        <div class="container">
-            <div class="calculator noselect">
+
+    <header id="main-header">
+        <h1>DJ's Calculator</h1>
+    </header>
+    <main class="app">
+        <div class="container noselect">
                 <div class="calculator__total">
                     <p>total</p>
                 </div>
-                <div class="calculator__numbers">
-                    <button class="digits digits-1">1</button>
-                    <button class="digits digits-2">2</button>
-                    <button class="digits digits-3">3</button> <br>
-                    <button class="digits digits-4">4</button>
-                    <button class="digits digits-5">5</button>
-                    <button class="digits digits-6">6</button> <br>
-                    <button class="digits digits-7">7</button>
-                    <button class="digits digits-8">8</button>
-                    <button class="digits digits-9">9</button> <br>
-                    <button class="digits digits-0">0</button>
-                    <button class="digits clear">C</button>
+                <div class="calculator-btn__container">
+                    <div class="calculator__numbers">
+                        <form id="number-btns">
+                            <input type="button" value="1">
+                            <input type="button" value="2">
+                            <input type="button" value="3">
+                            <input type="button" value="4">
+                            <input type="button" value="5">
+                            <input type="button" value="6">
+                            <input type="button" value="7">
+                            <input type="button" value="8">
+                            <input type="button" value="9">
+                            <input type="button" value="0">
+                        </form>
+                    </div>
+                    <div class="calculator__functions">
+                        <form id="number-functions">
+                            <input type="button" value="C">
+                            <input type="button" value="&#8592;">
+                            <input type="button" value="+">
+                            <input type="button" value="-">
+                            <input type="button" value="x">
+                            <input type="button" value="/">
+                        </form>
+                    </div>
                 </div>
-                <div class="calculator__functions">
-                    <button class="add operator">+</button>
-                    <button class="subtract operator">-</button> <br>
-                    <button class="mutiply operator">x</button>
-                    <button class="divide operator">/</button> <br>
-                    <button class="equals operator">=</button>
-                </div>
-                <p>DJ's Calculator!</p>
-                <div class="clr"></div>
-
-            </div>
-
         </div>
-    </div>
+    </main>
     <script src="./js/app.js" type="module"></script>
 </body>
 </html>
