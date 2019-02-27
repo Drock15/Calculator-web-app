@@ -3,7 +3,7 @@ const Calculate = (_ => {
   let pendingNumbersArray = [];
   let equals;
 
-  const $calculator = document.querySelector(".calculator");
+  const $calculator = document.querySelector(".container");
   const $total = document.querySelector(".calculator__total");
 
   const listeners = _ => {
