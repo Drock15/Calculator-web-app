@@ -1,24 +1,13 @@
-:root {
-  --main-bg-color: rgba(26, 26, 26, 0.637);
-  --main-font-color: white;
-  --light-white: #eee;
-  --light-black: rgba(17, 17, 17, 0.582);
-  --fill-light-black: rgb(17, 17, 17);
-  --light-yellow: rgb(243, 168, 47);
-  --light-green: rgb(75, 243, 89);
-  --container-width: 768px;
-  --font-body-stack : Arial, Helvetica, sans-serif;
-}
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+/* Global */
 body {
-  background-image: url("../images/calculator-bg.png");
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  background-image: url("../images/calculator-bg.png")
 }
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -28,74 +17,101 @@ body {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
-button:focus {
+
+input {
   outline: 0;
 }
-.calculator {
-  border: 2px solid black;
-  border-radius: 10px;
-  background: rgb(87, 87, 192);
-  width: var(--container-width);
+
+input:hover {
+  cursor: pointer;
+}
+
+/* header */
+#main-header {
   text-align: center;
-  margin: auto;
-  padding: 1.2rem;
+  border-bottom: 3px solid rgba(201, 0, 0, 0.596);
+  border-left: 5px solid rgba(255, 0, 0, 0.596);
+  border-right: 5px solid rgba(255, 0, 0, 0.596);
+  background: rgba(73, 73, 73, 0.904);
+  padding: 1rem;
+  color: rgb(0, 170, 0);
 }
-.calculator > p {
-  font-family: cursive;
+
+/* Container */
+.container {
+  margin: 1rem auto;
+  padding: 2rem;
+  border: 2px solid #333;
+  border-radius: 10px;
+  width: 450px;
+  text-align: center;
+  background: rgba(0, 150, 177, 0.514);
 }
-.clr {
-  clear: both;
-}
+
+/* Calculator Content*/
 .calculator__total {
-  border: 12px double black;
-  margin-bottom: 10px;
-  background: var(--main-bg-color);
-  color: var(--light-green);
-  height: 4.5rem;
+  border: 10px double black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: .5rem;
+  background: rgb(87, 87, 192);
 }
+
+.calculator__total p {
+  color: lightgreen;
+  font-size: 2rem;
+}
+
+.calculator-btn__container {
+  display: flex;
+  background: rgb(87, 87, 192);
+  border-radius: 10px;
+}
+
 .calculator__numbers {
-  border: 12px solid black;
-  padding: 1.2rem;
-  width: 65%;
-  float: left;
-  color: var(--main-font-color);
-  background: var(--main-bg-color);
+  border: 2px solid black;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 10px;
+  padding: 1rem;
+  flex: 1;
 }
+
+#number-btns input {
+  font-size: 2rem;
+  width: 37.8px;
+  height: 57px;
+  background: rgb(63, 63, 63);
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.63);
+  border-radius: 10px;
+  transition: 0.3ms all ease;
+}
+
+#number-btns input:hover {
+  background: rgba(51, 51, 51, 0.678);
+  border-color: rgba(0, 128, 0, 0.712);
+}
+
 .calculator__functions {
-  border: 12px solid black;
-  padding: 1.2rem;
-  width: 35%;
-  float: left;
-  background: var(--main-bg-color);
+  border: 2px solid black;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 10px;
+  padding: 1rem;
+  flex: 1;
 }
-.digits {
-  padding: 5px;
-  margin: 1.2rem;
-  font-size: 2.4rem;
-  background: var(--light-black);
-  font-weight: bold;
-  color: var(--light-white);
-  border: 2px solid var(--light-black);
+
+#number-functions input {
+  font-size: 2rem;
+  width: 37.8px;
+  height: 57px;
+  margin: .5rem;
+  background: rgb(63, 63, 63);
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.63);
   border-radius: 10px;
-  transition: 0.3ms all ease;
 }
-.digits:hover {
-  cursor: pointer;
-  background: var(--fill-light-black);
-}
-.operator {
-  padding: 5px;
-  margin: 1.2rem;
-  font-size: 2.4rem;
-  width: 40px;
-  background: var(--light-black);
-  font-weight: bold;
-  color: var(--light-white);
-  border: 2px solid var(--light-black);
-  border-radius: 10px;
-  transition: 0.3ms all ease;
-}
-.operator:hover {
-  cursor: pointer;
-  background: var(--fill-light-black);
+
+#number-functions input:hover {
+  background: rgba(51, 51, 51, 0.678);
+  border-color: rgba(0, 128, 0, 0.712);
 }
