@@ -55,6 +55,9 @@ input:hover {
   border-top-right-radius: 5px;
   padding: 0.5rem;
   background: rgb(87, 87, 192);
+  height: 7vh;
+  color: lightgreen;
+  font-size: 2rem;
 }
 
 .calculator__total p {
@@ -80,7 +83,7 @@ input:hover {
   font-size: 2rem;
   width: 37.8px;
   height: 57px;
-  margin: 2px;
+  margin: 5px;
   background: rgb(63, 63, 63);
   color: white;
   border: 2px solid rgba(0, 0, 0, 0.63);
@@ -105,7 +108,7 @@ input:hover {
   font-size: 2rem;
   width: 37.8px;
   height: 57px;
-  margin: 0.5rem;
+  margin: 6px;
   background: rgb(63, 63, 63);
   color: white;
   border: 2px solid rgba(0, 0, 0, 0.63);
