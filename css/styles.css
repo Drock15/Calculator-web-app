@@ -121,3 +121,35 @@ input:hover {
   color: rgb(0, 46, 250);
   border-color: rgba(0, 128, 0, 0.712);
 }
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+
+  .calculator__total {
+    font-size: 1.5rem;
+  }
+
+  .calculator-btn__container {
+    height: 328px;
+  }
+
+  #number-btns input {
+    width: 1.2em;
+    height: 1.2em;
+    font-size: 2rem;
+  }
+
+  #number-functions input {
+    width: 1.2em;
+    height: 1.2em;
+    font-size: 1.72rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .calculator__total {
+    height: 65px;
+  }
+}
