@@ -91,12 +91,6 @@ input:hover {
   transition: 0.3ms all ease;
 }
 
-#number-btns input:hover {
-  background: white;
-  color: rgb(212, 0, 0);
-  border-color: rgba(0, 128, 0, 0.712);
-}
-
 .calculator__functions {
   border: 2px solid black;
   border-top-right-radius: 5px;
@@ -116,9 +110,15 @@ input:hover {
   border-radius: 10px;
 }
 
-#number-functions input:hover {
+#number-functions .interactiveColor {
   background: white;
   color: rgb(0, 46, 250);
+  border-color: rgba(0, 128, 0, 0.712);
+}
+
+#number-btns .interactiveColor {
+  background: white;
+  color: rgb(212, 0, 0);
   border-color: rgba(0, 128, 0, 0.712);
 }
 
