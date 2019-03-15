@@ -1,4 +1,3 @@
-import Calculate from './modules/calc.js';
-
+import Calculate from "./modules/calc.js";
 
 Calculate.init();
