@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/Drock15/Calculator-web-app/issues"
   },
-  "homepage": "https://drock15.github.io/calculator-web-app",
+  "homepage": "https://drock15.github.io/Calculator-web-app",
   "dependencies": {
     "gh-pages": "^2.0.1"
   }
