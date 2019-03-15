@@ -8,6 +8,9 @@ const Calculate = (_ => {
 
   const listeners = _ => {
     calculatorBtns.addEventListener("click", event => {
+      let buttonPicked = event.target;
+      buttonPicked.classList.add("interactiveColor");
+      setTimeout(() => buttonPicked.classList.remove("interactiveColor"), 250);
       if (event.target.value === "C") {
         pendingNumbersArray.length = 0;
         calculatorTotalScreen.innerHTML = "0";
@@ -19,7 +22,11 @@ const Calculate = (_ => {
         pendingNumbersArray.push(lastNumberTotal);
       } else if (event.target.value === "←") {
         pendingNumbersArray.pop();
-        calculatorTotalScreen.innerHTML = pendingNumbersArray.join("");
+        if (pendingNumbersArray.length === 0) {
+          calculatorTotalScreen.innerHTML = 0;
+        } else {
+          calculatorTotalScreen.innerHTML = pendingNumbersArray.join("");
+        }
       } else {
         checkValue(event.target.value);
       }
