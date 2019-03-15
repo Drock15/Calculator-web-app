@@ -55,9 +55,9 @@ input:hover {
   border-top-right-radius: 5px;
   padding: 0.5rem;
   background: rgba(87, 87, 192, 0.74);
-  height: 7vh;
   color: lightgreen;
   font-size: 2rem;
+  display: block;
 }
 
 .calculator__total p {
@@ -124,7 +124,7 @@ input:hover {
 
 @media (max-width: 500px) {
   .container {
-    width: 100%;
+    width: calc(100% - 20px);
   }
 
   .calculator__total {
@@ -132,19 +132,7 @@ input:hover {
   }
 
   .calculator-btn__container {
-    height: 328px;
-  }
-
-  #number-btns input {
-    width: 1.2em;
-    height: 1.2em;
-    font-size: 2rem;
-  }
-
-  #number-functions input {
-    width: 1.2em;
-    height: 1.2em;
-    font-size: 1.72rem;
+    display: block;
   }
 }
 
