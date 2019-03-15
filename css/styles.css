@@ -30,8 +30,8 @@ input:hover {
 #main-header {
   text-align: center;
   border-bottom: 3px solid rgba(201, 0, 0, 0.596);
-  border-left: 5px solid rgba(255, 0, 0, 0.596);
-  border-right: 5px solid rgba(255, 0, 0, 0.596);
+  border-left: 5px solid rgba(0, 238, 255, 0.692);
+  border-right: 5px solid rgba(0, 238, 255, 0.692);
   background: rgba(73, 73, 73, 0.904);
   padding: 1rem;
   color: rgb(0, 170, 0);
@@ -40,7 +40,7 @@ input:hover {
 /* Container */
 .container {
   margin: 1rem auto;
-  padding: 2rem;
+  padding: 1.2rem;
   border: 2px solid #333;
   border-radius: 10px;
   width: 450px;
@@ -54,7 +54,7 @@ input:hover {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   padding: 0.5rem;
-  background: rgb(87, 87, 192);
+  background: rgba(87, 87, 192, 0.74);
   height: 7vh;
   color: lightgreen;
   font-size: 2rem;
@@ -67,7 +67,7 @@ input:hover {
 
 .calculator-btn__container {
   display: flex;
-  background: rgb(87, 87, 192);
+  background: rgba(87, 87, 192, 0.74);
   border-radius: 10px;
 }
 
@@ -84,7 +84,7 @@ input:hover {
   width: 37.8px;
   height: 57px;
   margin: 5px;
-  background: rgb(63, 63, 63);
+  background: rgb(212, 0, 0);
   color: white;
   border: 2px solid rgba(0, 0, 0, 0.63);
   border-radius: 10px;
@@ -92,7 +92,8 @@ input:hover {
 }
 
 #number-btns input:hover {
-  background: rgba(51, 51, 51, 0.678);
+  background: white;
+  color: rgb(212, 0, 0);
   border-color: rgba(0, 128, 0, 0.712);
 }
 
@@ -108,14 +109,15 @@ input:hover {
   font-size: 2rem;
   width: 37.8px;
   height: 57px;
-  margin: 6px;
-  background: rgb(63, 63, 63);
+  margin: 8px;
+  background: rgb(0, 46, 250);
   color: white;
   border: 2px solid rgba(0, 0, 0, 0.63);
   border-radius: 10px;
 }
 
 #number-functions input:hover {
-  background: rgba(51, 51, 51, 0.678);
+  background: white;
+  color: rgb(0, 46, 250);
   border-color: rgba(0, 128, 0, 0.712);
 }

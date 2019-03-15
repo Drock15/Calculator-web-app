@@ -17,6 +17,9 @@ const Calculate = (_ => {
         );
         pendingNumbersArray.length = 0;
         pendingNumbersArray.push(lastNumberTotal);
+      } else if (event.target.value === "←") {
+        pendingNumbersArray.pop();
+        calculatorTotalScreen.innerHTML = pendingNumbersArray.join("");
       } else {
         checkValue(event.target.value);
       }
