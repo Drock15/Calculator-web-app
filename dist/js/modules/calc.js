@@ -1,3 +1,5 @@
+import { Sound } from "./sound.js";
+
 const Calculate = (_ => {
   let lastNumberTotal;
   let pendingNumbersArray = [];
@@ -8,27 +10,33 @@ const Calculate = (_ => {
 
   const listeners = _ => {
     calculatorBtns.addEventListener("click", event => {
-      let buttonPicked = event.target;
-      buttonPicked.classList.add("interactiveColor");
-      setTimeout(() => buttonPicked.classList.remove("interactiveColor"), 250);
-      if (event.target.value === "C") {
-        pendingNumbersArray.length = 0;
-        calculatorTotalScreen.innerHTML = "0";
-      } else if (event.target.value === "=") {
-        calculatorTotalScreen.innerHTML = outputTotalScreen(
-          pendingNumbersArray
+      if (event.target.matches("input")) {
+        Sound.clickSound.play();
+        let buttonPicked = event.target;
+        buttonPicked.classList.add("interactiveColor");
+        setTimeout(
+          () => buttonPicked.classList.remove("interactiveColor"),
+          250
         );
-        pendingNumbersArray.length = 0;
-        pendingNumbersArray.push(lastNumberTotal);
-      } else if (event.target.value === "←") {
-        pendingNumbersArray.pop();
-        if (pendingNumbersArray.length === 0) {
-          calculatorTotalScreen.innerHTML = 0;
+        if (event.target.value === "C") {
+          pendingNumbersArray.length = 0;
+          calculatorTotalScreen.innerHTML = "0";
+        } else if (event.target.value === "=") {
+          calculatorTotalScreen.innerHTML = outputTotalScreen(
+            pendingNumbersArray
+          );
+          pendingNumbersArray.length = 0;
+          pendingNumbersArray.push(lastNumberTotal);
+        } else if (event.target.value === "←") {
+          pendingNumbersArray.pop();
+          if (pendingNumbersArray.length === 0) {
+            calculatorTotalScreen.innerHTML = 0;
+          } else {
+            calculatorTotalScreen.innerHTML = pendingNumbersArray.join("");
+          }
         } else {
-          calculatorTotalScreen.innerHTML = pendingNumbersArray.join("");
+          checkValue(event.target.value);
         }
-      } else {
-        checkValue(event.target.value);
       }
     });
   };
