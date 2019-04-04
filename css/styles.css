@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +8,7 @@
 /* Global */
 body {
   background-image: url("../images/calculator-bg.png");
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .noselect {
