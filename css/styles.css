@@ -124,6 +124,9 @@ input:hover {
   color: rgb(212, 0, 0);
   border-color: rgba(0, 128, 0, 0.712);
 }
+.instructions {
+  text-align: center;
+}
 
 .show-instructions {
   border: none;
@@ -133,11 +136,12 @@ input:hover {
 }
 
 .instructions-text {
-  display: none;
+  opacity: 0;
   margin-top: 20px;
   padding: 10px;
   background: rgba(51, 51, 51, 0.884);
   color: #fff;
+  transition: all ease-in 0.3s;
 }
 
 ul {
@@ -147,7 +151,8 @@ ul {
 }
 
 .hide-show {
-  display: block;
+  opacity: 1;
+  transition: all ease 0.3s;
 }
 
 @media (max-width: 500px) {
