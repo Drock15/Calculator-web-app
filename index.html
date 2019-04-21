@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <title>Calculator</title>
   </head>
   <body>
     <header id="main-header">
@@ -35,13 +42,45 @@
           <div class="calculator__functions">
             <form id="number-functions">
               <input type="button" value="C" />
-              <input type="button" value="&#8592;" />
+              <input type="button" value="←" />
               <input type="button" value="+" />
               <input type="button" value="-" />
               <input type="button" value="x" />
               <input type="button" value="/" />
               <input type="button" value="=" />
             </form>
+          </div>
+        </div>
+        <div class="instructions">
+          <h1>Simple Calculator instructions</h1>
+          <button class="show-instructions">
+            Show Instructions <i class="fas"></i>
+          </button>
+          <div class="instructions-text">
+            <p>
+              Simple calculator allows you to add, substract, multiple, and
+              divide.
+            </p>
+            <p>Click on a number on left column to select it.</p>
+            <p>Takes any whole or decimal number.</p>
+            <p>
+              Click on a operator button located in the right column to select
+              the function you wish to use.
+            </p>
+            <ul>
+              <li>The (C) button clears the output screen.</li>
+              <li>
+                The left arrow (←) button deletes the last number that was
+                clicked.
+              </li>
+              <li>
+                The plus sign (+) button adds. The minus sign (-) button
+                subtracts.
+              </li>
+              <li>The (X) button multiples.</li>
+              <li>The forward slash (/) button divides.</li>
+              <li>The equal sign (=) button equates.</li>
+            </ul>
           </div>
         </div>
       </div>
